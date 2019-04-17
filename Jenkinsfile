@@ -16,7 +16,8 @@ pipeline {
                 script {
                     app = docker.build("mostafaradwan/train-schedule")
                     app.inside {
-                      //  sh 'echo $(curl localhost:8080)'
+                       sleep 90 
+                       sh 'echo $(curl localhost:8080)'
                     }
                 }
             }
